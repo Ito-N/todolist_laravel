@@ -12,6 +12,6 @@ $title = '投稿詳細';
         <h2>{{ $post->title }}</h2>
         <time>{{ $post->published_at->format('Y年m月d日') }}</time>
         <div>{!! nl2br(e($post->body)) !!}</div>
-        <div class="btn btn-secondary"><a href="{{ route('front.posts.index') }}">'一覧へ戻る'</a></div>
+        <div class="btn btn-secondary"><a href="{{ route('post.index') }}">'一覧へ戻る'</a></div>
     </div>
 @endsection

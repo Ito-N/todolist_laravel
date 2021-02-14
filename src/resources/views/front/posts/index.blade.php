@@ -16,7 +16,7 @@ $title = '投稿一覧';
                 @foreach($posts as $post)
                     <tr>
                         <td>{{ $post->published_format }}</td>
-                        <td><a href="{{ route('front.posts.show', ['post' => $post->id]) }}">{{ $post->title }}</a></td>
+                        <td><a href="{{ route('post.show', ['id' => $post->id]) }}">{{ $post->title }}</a></td>
                     </tr>
                 @endforeach
             </table>
