@@ -1,5 +1,5 @@
 <?php
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\front\PostController;
 
-Route::get('/', 'PostController@index')->name('home');
-Route::resource('posts', 'PostController')->only(['index','show']);
+Route::get('/', [PostController::class, 'index'])->name('post.index');
+Route::get('/{id}', [PostController::class, 'show'])->name('post.show');
